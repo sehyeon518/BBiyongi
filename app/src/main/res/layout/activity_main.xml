@@ -45,7 +45,7 @@
         android:textSize="15sp"
         android:textColor="#ffffff"
         android:textAlignment="center"
-        android:background="@drawable/btn_round"
+        android:background="@drawable/btn_round_yellow"
         android:padding="10dp"/>
 
 </LinearLayout>
