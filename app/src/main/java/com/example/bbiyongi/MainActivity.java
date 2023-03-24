@@ -11,14 +11,14 @@ import com.example.bbiyongi.notifications.NotificationsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView btn_noticifations;
+    TextView btn_notifications;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_noticifations = (TextView) findViewById(R.id.btn_notifications);
-        btn_noticifations.setOnClickListener(new View.OnClickListener() {
+        btn_notifications = (TextView) findViewById(R.id.btn_notifications);
+        btn_notifications.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), NotificationsActivity.class);
