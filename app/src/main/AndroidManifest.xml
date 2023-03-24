@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".notifications.NotificationsActivity" android:label="Notifications Activity"/>
+        <activity android:name=".SaveActivity" android:label="Save Activity"/>
     </application>
 
 </manifest>
