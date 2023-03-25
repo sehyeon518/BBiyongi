@@ -32,7 +32,7 @@ public class Adapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public Notification getItem(int i) {
         return notifications.get(i);
     }
 
