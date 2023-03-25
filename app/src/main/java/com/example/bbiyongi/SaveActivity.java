@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SaveActivity extends AppCompatActivity {
 
     VideoView video;
-    TextView btn_to_police;
+    TextView record_date2;
+    TextView btn_police;
     ImageView btn_back_notifications;
 
     @Override

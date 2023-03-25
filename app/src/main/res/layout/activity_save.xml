@@ -29,6 +29,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>
     <TextView
+        android:id="@+id/record_date2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -52,5 +53,5 @@
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:gravity="center"
-        android:background="@drawable/btn_round_pink"/>
+        android:background="@drawable/btn_round_pink" />
 </LinearLayout>
