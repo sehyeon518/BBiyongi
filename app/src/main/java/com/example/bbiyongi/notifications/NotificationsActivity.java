@@ -12,10 +12,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.bbiyongi.MainActivity;
 import com.example.bbiyongi.R;
 import com.example.bbiyongi.SaveActivity;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -36,7 +37,11 @@ public class NotificationsActivity extends AppCompatActivity {
             }
         });
 
-        this.InitializeData();
+        try {
+            this.InitializeData();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         ListView list_view = (ListView) findViewById(R.id.list_view);
         final Adapter myAdapter = new Adapter(this,notificationArrayList);
@@ -60,12 +65,18 @@ public class NotificationsActivity extends AppCompatActivity {
         });
     }
 
-    public void InitializeData()
-    {
+    public void InitializeData() throws ParseException {
         notificationArrayList = new ArrayList<Notification>();
 
-        notificationArrayList.add(new Notification(R.drawable.siren, new Date()));
-        notificationArrayList.add(new Notification(R.drawable.siren, new Date()));
-        notificationArrayList.add(new Notification(R.drawable.siren, new Date()));
+        String[] arr_date =new String[]{"2000-09-02 08:10:55", "2001-02-01 13:40:15", "2002-03-31 10:15:15"};
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        for (String i : arr_date) {
+            Date date = simpleDateFormat.parse(i);
+            notificationArrayList.add(new Notification(R.drawable.siren, date));
+        }
+//        notificationArrayList.add(new Notification(R.drawable.siren, new Date(String.valueOf(format.parse("2019-09-02 08:10:55")))));
+//        notificationArrayList.add(new Notification(R.drawable.siren, new Date(String.valueOf(format.parse("2001-02-01 13:40:15")))));
+//        notificationArrayList.add(new Notification(R.drawable.siren, new Date(String.valueOf(format.parse("2002:03:31 10:15:15")))));
     }
 }
