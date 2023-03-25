@@ -38,14 +38,13 @@
     <TextView
         android:id="@+id/btn_notifications"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="알림 내역"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
-        android:textAlignment="center"
-        android:background="@drawable/btn_round_yellow"
-        android:padding="10dp"/>
+        android:gravity="center"
+        android:background="@drawable/btn_round_yellow" />
 
 </LinearLayout>
