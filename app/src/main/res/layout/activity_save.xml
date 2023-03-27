@@ -42,7 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="동영상을 저장하는 중입니다"/>
+        android:text="동영상을 저장하는 중입니다"
+        android:textColor="#767F88"/>
     <TextView
         android:id="@+id/btn_police"
         android:layout_width="180dp"
@@ -54,4 +55,16 @@
         android:textSize="20sp"
         android:gravity="center"
         android:background="@drawable/btn_round_pink" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="신고하기 버튼을 누르면 녹화된 동영상과 위치정보를 112에 전송합니다."
+        android:textSize="12sp"
+        android:textColor="#767F88"/>
 </LinearLayout>
