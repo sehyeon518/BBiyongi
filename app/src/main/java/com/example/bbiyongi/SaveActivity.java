@@ -2,7 +2,6 @@ package com.example.bbiyongi;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,21 +23,15 @@ public class SaveActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String date = intent.getStringExtra("date");
-        record_date2 = (TextView) findViewById(R.id.record_date2);
+        record_date2 = findViewById(R.id.record_date2);
         record_date2.setText("녹화 일시 " + date);
 
-        btn_back_notifications = (ImageView) findViewById(R.id.btn_back_notifications);
-        btn_back_notifications.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btn_back_notifications = findViewById(R.id.btn_back_notifications);
+        btn_back_notifications.setOnClickListener(v -> finish());
 
-        btn_police = (TextView) findViewById(R.id.btn_police);
-        btn_police.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "신고하기", Toast.LENGTH_LONG).show();
-            }
+        btn_police = findViewById(R.id.btn_police);
+        btn_police.setOnClickListener(v -> {
+            Toast.makeText(getApplicationContext(), "신고하기", Toast.LENGTH_SHORT).show();
         });
     }
 }
