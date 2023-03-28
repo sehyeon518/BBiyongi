@@ -39,14 +39,6 @@
         android:text="녹화 일시 2023.03.02(Thu) 12:00"
         android:textColor="#767F88"/>
     <TextView
-        android:id="@+id/save_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="동영상을 저장하는 중입니다"
-        android:textColor="#767F88"/>
-    <TextView
         android:id="@+id/btn_police"
         android:layout_width="180dp"
         android:layout_height="50dp"
