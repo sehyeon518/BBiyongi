@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bbiyongi.R;
 
@@ -52,7 +53,12 @@ public class Adapter extends BaseAdapter {
         Date date = notifications.get(i).getDate();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy.MM.dd(E) HH:mm:ss");
         img_thumbnail.setImageResource(notifications.get(i).getImg_url());
-        record_date.setText("녹화 일시\n" + simpleDateFormat.format(date));
+        String date_str = simpleDateFormat.format(date);
+        record_date.setText("녹화 일시\n" + date_str);
+
+        btn_save.setOnClickListener(v1 -> {
+            Toast.makeText(mContext.getApplicationContext(), date_str, Toast.LENGTH_SHORT).show();
+        });
 
         return view;
     }

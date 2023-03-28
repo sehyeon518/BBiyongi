@@ -23,7 +23,6 @@ import java.util.Date;
 public class NotificationsActivity extends AppCompatActivity {
 
     ImageView btn_back_main;
-    TextView btn_go_save;
     ArrayList<Notification> notificationArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,19 +53,9 @@ public class NotificationsActivity extends AppCompatActivity {
                 Date date = myAdapter.getItem(position).getDate();
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy.MM.dd(E) HH:mm:ss");
                 String date_str = simpleDateFormat.format(date);
-                Log.d("test", date_str);
-                Toast.makeText(getApplicationContext(), date_str, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), SaveActivity.class);
                 intent.putExtra("date", date_str);
                 startActivity(intent);
-//                btn_go_save = (TextView) findViewById(R.id.btn_go_save);
-//                btn_go_save.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent = new Intent(getApplicationContext(), SaveActivity.class);
-//                        startActivity(intent);
-//                    }
-//                });
             }
         });
     }
