@@ -27,6 +27,7 @@
         </activity>
         <activity android:name=".notifications.NotificationsActivity" android:label="Notifications Activity"/>
         <activity android:name=".SaveActivity" android:label="Save Activity"/>
+        <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog"/>
     </application>
 
 </manifest>
