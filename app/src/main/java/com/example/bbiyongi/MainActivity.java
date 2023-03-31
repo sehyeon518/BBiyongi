@@ -13,6 +13,8 @@ import com.example.bbiyongi.notifications.NotificationsActivity;
 public class MainActivity extends AppCompatActivity {
 
     TextView btn_notifications;
+    ImageView btn_setting;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        btn_setting = findViewById(R.id.setting);
+        btn_setting.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
+            startActivity(intent);
         });
     }
 }
