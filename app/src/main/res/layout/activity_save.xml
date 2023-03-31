@@ -51,12 +51,12 @@
         android:background="@drawable/btn_round_pink" />
     <TextView
         android:id="@+id/msg_box"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:padding="7dp"
-        android:text="OO시 OO구 OO로 OO에서 폭행이 감지되었습니다.\n출동 부탁드립니다.\n녹화된 동영상: www.OOO.OOO"
+        android:text="@string/msg_default"
         android:textSize="13sp"
         android:background="#5575a4f4"/>
     <View
