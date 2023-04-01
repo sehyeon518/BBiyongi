@@ -15,6 +15,7 @@ public class SaveActivity extends AppCompatActivity {
     TextView record_date2;
     TextView btn_police;
     ImageView btn_back_notifications;
+    TextView msg_box;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,12 @@ public class SaveActivity extends AppCompatActivity {
 
         btn_back_notifications = findViewById(R.id.btn_back_notifications);
         btn_back_notifications.setOnClickListener(v -> finish());
+
+        msg_box = findViewById(R.id.msg_box);
+        msg_box.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), PopupActivity.class);
+            startActivity(i);
+        });
 
         btn_police = findViewById(R.id.btn_police);
         btn_police.setOnClickListener(v -> {
