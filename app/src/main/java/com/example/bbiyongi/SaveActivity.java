@@ -2,6 +2,7 @@ package com.example.bbiyongi;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +39,15 @@ public class SaveActivity extends AppCompatActivity {
 
         btn_police = findViewById(R.id.btn_police);
         btn_police.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(), "신고하기", Toast.LENGTH_SHORT).show();
+            String sms = msg_box.getText().toString();
+            try{
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage("+821085441920", null, sms, null, null);
+                Toast.makeText(getApplicationContext(), "전송을 완료하였습니다.", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e) {
+                Toast.makeText(getApplicationContext(), "전송을 실패하였습니다. 다시 시도해 주세요", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
