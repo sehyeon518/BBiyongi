@@ -33,19 +33,21 @@ public class PopupActivity extends Activity {
         btn_get_pos = findViewById(R.id.btn_get_pos);
         btn_get_pos.setOnClickListener(v -> {
             String msg = edit_msg.getText().toString();
-            msg = msg + "OO시 OO구 OO로 OO";
+            msg = msg + getResources().getString(R.string.msg_pos);
             edit_msg.setText(msg);
         });
 
         btn_get_date = findViewById(R.id.btn_get_date);
         btn_get_date.setOnClickListener(v -> {
             String msg = edit_msg.getText().toString();
-            msg = msg + "OOOO년 OO월 OO일 OO시 OO분 OO초";
+            msg = msg + getResources().getString(R.string.msg_date);
             edit_msg.setText(msg);
         });
 
         btn_get_link = findViewById(R.id.btn_get_link);
         btn_get_link.setOnClickListener(v -> {
+            String msg = edit_msg.getText().toString();
+            msg = msg + getResources().getString(R.string.msg_link);
             edit_msg.setText(msg);
         });
         //데이터 가져오기
