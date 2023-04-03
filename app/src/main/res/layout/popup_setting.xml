@@ -49,6 +49,18 @@
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:background="@drawable/btn_round_yellow"/>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/btn_get_link"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="링크"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/btn_round_yellow"/>
     </LinearLayout>
     <View
         android:background="#66bdbdbd"
