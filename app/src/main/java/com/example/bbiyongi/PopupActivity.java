@@ -26,8 +26,16 @@ public class PopupActivity extends Activity {
         btn_set_return = findViewById(R.id.btn_set_return);
         btn_set_return.setOnClickListener(v -> {
             // 간편 신고 메시지 저장 기능 추가
-            Toast.makeText(getApplicationContext(), "저장되었습니다", Toast.LENGTH_SHORT).show();
-            finish();
+            String msg = edit_msg.getText().toString();
+            if (msg.contains(getResources().getString(R.string.msg_date))
+                    && (msg.contains(getResources().getString(R.string.msg_pos)))
+                    && (msg.contains(getResources().getString(R.string.msg_link))) ){
+                Toast.makeText(getApplicationContext(), "저장되었습니다", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "위치, 날짜, 링크 정보는 반드시 포함되어야 합니다.", Toast.LENGTH_SHORT).show();
+            }
         });
 
         btn_get_pos = findViewById(R.id.btn_get_pos);
